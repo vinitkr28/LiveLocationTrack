@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".DashboardActivity">
+
+    <TextView
+        android:id="@+id/showLiveLocationData"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/red_round_layout"
+        android:lineSpacingExtra="5dp"
+        android:lineSpacingMultiplier="1.5"
+        android:padding="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/liveLocationData"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.07999998" />
+
+    <Button
+        android:id="@+id/liveLocationData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/blue_round_layout"
+        android:fontFamily="serif"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:paddingStart="18dp"
+        android:paddingTop="7dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="7dp"
+        android:stateListAnimator="@null"
+        android:text="@string/start_live_location"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:onClick="liveLocationDataClicked"
+        app:layout_constraintBottom_toTopOf="@id/liveLocationOnGoogleMap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.60"
+        app:layout_constraintVertical_chainStyle="packed"></Button>
+
+    <Button
+        android:id="@+id/liveLocationOnGoogleMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/blue_round_layout"
+        android:fontFamily="serif"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:paddingStart="18dp"
+        android:paddingTop="7dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="7dp"
+        android:onClick="openGoogleMap"
+        android:stateListAnimator="@null"
+        android:text="Live Location On Google Map"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/liveLocationData"
+        app:layout_constraintVertical_chainStyle="packed"></Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
